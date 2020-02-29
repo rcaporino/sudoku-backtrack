@@ -1,28 +1,35 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div>
+    <b-container>
+      <b-row>
+        <b-col>
+          <b-card class="board mt-2">
+            <!-- <app-square></app-square> -->
+            <app-board></app-board>
+          </b-card>
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
-export default {
-  name: "App",
-  components: {
-    HelloWorld
-  }
-};
+// import Square from './components/Square.vue';
+import Board from './components/Board.vue';
+  export default {
+    components: {
+      // appSquare: Square,
+      appBoard: Board
+    }
+  };
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@media (min-width: 768px) { 
+  .board {
+    width: 500px;
+    margin: auto;
+    padding: 2px;
+  }
+ }
 </style>
